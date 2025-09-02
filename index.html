@@ -1,284 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tamas Kiss — Python Automation & A</title>
-  <meta name="description" content="Minimal dark portfolio of AI + Python automations by Tamas" />
-  <style>
-    :root {
-      --bg: #0A2445;
-      --panel: #11151a;
-      --muted: #99a2ad;
-      --text: #e6edf3;
-      --accent: #7aa2ff;
-      --border: #1b2129;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(2100px 600px at 20% -10%, #0f1420, var(--bg));
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    a { color: var(--text); text-decoration: none; }
-    a:hover { color: var(--accent); }
-
-    /* Header */
-    header {
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(11,14,17,0.85), rgba(11,14,17,0));
-      border-bottom: 1px solid var(--border);
-    }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 14px 18px; }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .brand { font-weight: 700; letter-spacing: 0.3px; }
-    .brand small { color: var(--muted); font-weight: 500; }
-    .nav a { margin-left: 18px; opacity: .85; }
-
-    /* Hero */
-    .hero { padding: 60px 18px 24px; }
-    .panel {
-      background: linear-gradient(180deg, #0e1318, #0b0e11);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 26px;
-    }
-    .title { font-size: clamp(28px, 3.6vw, 40px); margin: 0 0 6px; }
-    .subtitle { color: var(--muted); margin: 0 0 14px; }
-    .cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; }
-    .btn {
-      display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
-      background: #0d1218; color: var(--text); transition: .2s ease; cursor: pointer;
-    }
-    .btn:hover { transform: translateY(-1px); border-color: #2a3340; }
-
-    /* Grid */
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-    .col-8 { grid-column: span 8; }
-    .col-6 { grid-column: span 6; }
-    .col-4 { grid-column: span 4; }
-    .col-12 { grid-column: span 12; }
-
-    @media (max-width: 820px){
-      .grid { grid-template-columns: repeat(6, 1fr); }
-      .col-8, .col-6, .col-4 { grid-column: span 6; }
-    }
-
-    /* Section headings */
-    h2.section { font-size: 20px; letter-spacing: .4px; margin: 28px 0 12px; color: var(--muted); }
-
-    /* Cards */
-    .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0 0 12px; color: var(--muted); }
-    .tags { display:flex; flex-wrap: wrap; gap: 8px; }
-    .tag { font-size: 12px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
-
-    /* Footer */
-    footer { padding: 30px 18px; color: var(--muted); text-align: center; border-top: 1px solid var(--border); margin-top: 40px; }
-
-    /* Fade routing */
-    main { min-height: 40vh; }
-    .fade-enter { opacity: 0; transform: translateY(6px); }
-    .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity .25s ease, transform .25s ease; }
-  </style>
+  <meta charset="utf-8">
+  <title>Tamas Kiss — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">Tamas <small>• AI & Python Automation</small></div>
-      <nav>
-        <a href="#home" data-nav>Home</a>
-        <a href="#projects" data-nav>Projects</a>
-        <a href="#about" data-nav>About</a>
-        <a href="#contact" data-nav>Contact</a>
-      </nav>
+  <div class="container">
+    <h1 class="title">Tamas Kiss</h1>
+    <p class="subtitle">Python · Automation · AI · ML · Tools</p>
+
+    <!-- Featured Project -->
+    <h2 class="section">Featured Project</h2>
+    <div class="grid">
+      <div class="col-12">
+        <div class="card">
+          <h3>NAS File Organizer</h3>
+          <p>
+            Self-learning file organizer with hybrid Rules + ML engine, OCR support,
+            FastAPI web UI, Docker deployment, and auto-retrain scheduler.
+            Closed-loop feedback: review → correct → retrain → smarter sorting.
+            Designed for NAS systems (Synology/QNAP) but works on any Docker host.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Docker</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">ML</span>
+          </div>
+          <p style="margin-top:12px">
+            <a class="btn" href="https://github.com/ThomasKaen/nas_file_organizer" target="_blank" rel="noopener">Code</a>
+          </p>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <div class="wrap hero">
-    <section id="mount"></section>
+    <!-- Other Projects -->
+    <h2 class="section">Projects</h2>
+    <div class="grid">
+      <div class="col-4">
+        <div class="card">
+          <h3>File Sorter</h3>
+          <p>Automation script to sort files into folders by rules. Early prototype of NAS project.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span></div>
+          <p style="margin-top:12px">
+            <a class="btn" href="https://github.com/ThomasKaen/file_sorter" target="_blank">Code</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <h3>Bulk File Renamer</h3>
+          <p>Flexible renaming automation with custom rules. Built for freelance delivery (Fiverr).</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span></div>
+          <p style="margin-top:12px">
+            <a class="btn" href="https://github.com/ThomasKaen/bulk_file_renamer" target="_blank">Code</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <h3>Image Resizer GUI</h3>
+          <p>Desktop GUI for batch image resizing with privacy-first, ad-free approach. Cross-platform.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">GUI</span><span class="tag">Tkinter</span></div>
+          <p style="margin-top:12px">
+            <a class="btn" href="https://github.com/ThomasKaen/image_resizer_gui" target="_blank">Code</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <footer>
-    <div class="wrap">© <span id="year"></span> Tamas • Built with plain HTML/CSS/JS • Dark, minimal, no page reloads</div>
-  </footer>
-
-  <script>
-    // --------- Tiny router (hash-based, swaps content into #mount with fade) ---------
-    const mount = document.getElementById('mount');
-
-    const pages = {
-      home: () => `
-        <div class="grid">
-          <div class="col-8">
-            <div class="panel">
-              <h1 class="title">Hi, I’m Tamas.</h1>
-              <p class="subtitle">I build <strong>AI tools</strong> and <strong>Python automations</strong> — clean, practical software that solves real problems without fluff.</p>
-              <div class="cta">
-                <a class="btn" href="#projects">See projects</a>
-                <a class="btn" href="#contact">Contact</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-              <h3>Currently</h3>
-              <p>Transforming small prototypes into useful apps, with a focus on Python automation and AI learning projects.</p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">Automation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="section">Highlights</h2>
-        <div class="grid">
-          ${projectCards(['eon','classifier','sorter'])}
-        </div>
-      `,
-
-      projects: () => `
-        <h2 class="section">Projects</h2>
-        <div class="grid">
-          ${projectCards(['eon','classifier','sorter','renamer'])}
-        </div>
-      `,
-
-      about: () => `
-        <div class="grid">
-          <div class="col-8">
-            <div class="card">
-              <h3>About</h3>
-              <p>I’m a Python developer with a BSc from a London university, specializing in AI prototyping (PyTorch), automation, and lightweight product development. I build tools that are practical, reliable, and easy to use — from research prototypes to deployable utilities.</p>
-              <p>Focus areas: AI prototyping (PyTorch), small automation apps, and shipping minimal products fast.</p>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <h3>Core tools</h3>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-            <h3>Currently learning</h3>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">basic deployment</span>
-            </div>
-          </div>
-        </div>
-      `,
-
-      contact: () => `
-        <div class="grid">
-          <div class="col-6">
-            <div class="card">
-              <h3>Contact</h3>
-              <p>Open to remote roles and freelance automation/AI work.</p>
-              <p><a href="thomas.kaen.freelance@gmail">My e-mail</a><br>
-                 Personal: <a href="https://github.com/K4en" target="_blank" rel="noopener">https://github.com/K4en</a><br>
-                 Freelance projects: <a href="https://github.com/ThomasKaen" target="_blank" rel="noopener">https://github.com/ThomasKaen</a><br>
-                 Fiverr: <a href="https://www.fiverr.com/sellers/thomas_kaen/edit" target="_blank" rel="noopener">https://www.fiverr.com/sellers/thomas_kaen</a></p>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <h3>CV</h3>
-              <p><a class="btn" href="Tamas-Kiss-CV.pdf" target="_blank" rel="noopener">Download PDF</a></p>
-            </div>
-          </div>
-        </div>
-      `
-    };
-
-    // --------- Project Data ---------
-    const projects = {
-      eon: {
-        title: 'Eon — Lightweight AI Assistant',
-        desc: 'Routes questions to tools (search/docs/local data) and returns concise answers. Built for clarity over flash.',
-        tags: ['Python','Routing','Prompts','FastAPI (planned)'],
-        code: 'https://github.com/K4en/Personal-AI---Eon',
-        demo: '#',
-      },
-      classifier: {
-        title: 'Architectural Classifier',
-        desc: 'CNN prototype to classify building types/styles. Includes custom dataset prep and training loop.',
-        tags: ['PyTorch','CV','Data'],
-        code: 'https://github.com/K4en/BuildingClassifier',
-        demo: '#',
-      },
-      sorter: {
-        title: 'Nas File Organizer',
-        desc: 'Content-aware file sorter with OCR for NAS (Synology/QNAP/Docker-friendly).',
-        tags: ['Python','Automation','NAS','Docker'],
-        code: 'https://github.com/ThomasKaen/nas_file_organizer',
-        demo: '#',
-      },
-      renamer: {
-        title: 'Bulk File Renamer',
-        desc: 'Batch-renames files using regex, numbering, and case formatting. Simple UI planned.',
-        tags: ['Python','CLI'],
-        code: 'https://github.com/ThomasKaen/bulk_renamer_gui',
-        demo: '#',
-      }
-    };
-
-    function projectCards(keys){
-      return keys.map(k => {
-        const p = projects[k];
-        return `
-          <div class="col-4">
-            <div class="card">
-              <h3>${p.title}</h3>
-              <p>${p.desc}</p>
-              <div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-              <p style="margin-top:12px">
-                ${p.demo && p.demo !== '#' ? `<a class="btn" href="${p.demo}" target="_blank" rel="noopener">Live demo</a>` : `<span class="tag">demo coming</span>`}
-                <a class="btn" href="${p.code}" target="_blank" rel="noopener">Code</a>
-              </p>
-            </div>
-          </div>`
-      }).join('');
-    }
-
-    // --------- Router init ---------
-    function render(){
-      const hash = (location.hash || '#home').replace('#','');
-      const view = pages[hash] ? pages[hash]() : pages.home();
-      mount.innerHTML = `<main class="fade-enter">${view}</main>`;
-      requestAnimationFrame(() => {
-        mount.firstElementChild.classList.add('fade-enter-active');
-      });
-      // highlight nav
-      document.querySelectorAll('[data-nav]').forEach(a => {
-        const active = a.getAttribute('href') === `#${hash}`;
-        a.style.opacity = active ? '1' : '.75';
-      });
-    }
-    window.addEventListener('hashchange', render);
-    render();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
