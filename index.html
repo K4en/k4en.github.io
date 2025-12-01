@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tamas Kiss — Python Automation & A</title>
-  <meta name="description" content="Minimal dark portfolio of AI + Python automations by Tamas" />
+  <title>Tamas Kiss — Python Automation & AI</title>
+  <meta name="description" content="Minimal dark portfolio of AI + Python automations by Tamas Kiss — NAS tools, AI assistants, and practical developer projects." />
+  <link rel="icon" href="favicon.ico" />
   <style>
     :root {
       --bg: #0A2445;
@@ -134,7 +135,7 @@
           <div class="col-4">
             <div class="card">
               <h3>Currently</h3>
-              <p>Transforming small prototypes into useful apps, with a focus on Python automation and AI learning projects.</p>
+              <p>Turning small prototypes into useful apps, focusing on NAS tools, AI assistants, and workflow automation.</p>
               <div class="tags">
                 <span class="tag">Python</span>
                 <span class="tag">PyTorch</span>
@@ -151,52 +152,52 @@
       `,
 
       projects: () => {
-  // show NAS File Organizer as a full-width featured card,
-  // then render the rest of the projects below
-  const restKeys = Object.keys(projects).filter(
-    k => projects[k].title !== 'NAS File Organizer'
-  );
+        // show NAS File Organizer as a full-width featured card,
+        // then render the rest of the projects below
+        const restKeys = Object.keys(projects).filter(
+          k => projects[k].title !== 'NAS File Organizer'
+        );
 
-  return `
-    <h2 class="section">Featured Project</h2>
-    <div class="grid">
-      <div class="col-12">
-        <div class="card">
-          <h3>NAS File Organizer</h3>
-          <p>
-            Self-learning file organizer with hybrid Rules + ML engine, OCR support,
-            FastAPI web UI, Docker deployment, and an auto-retrain scheduler.
-            Closed-loop feedback: review → correct → retrain → smarter sorting.
-            Designed for NAS systems (Synology/QNAP) but works on any Docker host.
-          </p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Docker</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">ML</span>
+        return `
+          <h2 class="section">Featured Project</h2>
+          <div class="grid">
+            <div class="col-12">
+              <div class="card">
+                <h3>NAS File Organizer</h3>
+                <p>
+                  Self-learning file organizer with a hybrid Rules + ML engine, OCR support,
+                  FastAPI web UI, Docker deployment, and an auto-retrain scheduler.
+                  Closed-loop feedback: review → correct → retrain → smarter sorting.
+                  Designed for NAS systems (Synology/QNAP) but works on any Docker host.
+                </p>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Automation</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">ML</span>
+                </div>
+                <p style="margin-top:12px">
+                  <a class="btn" href="https://github.com/ThomasKaen/nas_file_organizer" target="_blank" rel="noopener">Code</a>
+                </p>
+              </div>
+            </div>
           </div>
-          <p style="margin-top:12px">
-            <a class="btn" href="https://github.com/ThomasKaen/nas_file_organizer" target="_blank" rel="noopener">Code</a>
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <h2 class="section">Other Projects</h2>
-    <div class="grid">
-      ${projectCards(restKeys)}
-    </div>
-  `;
-},
+          <h2 class="section">Other Projects</h2>
+          <div class="grid">
+            ${projectCards(restKeys)}
+          </div>
+        `;
+      },
 
       about: () => `
         <div class="grid">
           <div class="col-8">
             <div class="card">
               <h3>About</h3>
-              <p>I’m a Python developer with a BSc from a London university, specializing in AI prototyping (PyTorch), automation, and lightweight product development. I build tools that are practical, reliable, and easy to use — from research prototypes to deployable utilities.</p>
-              <p>Focus areas: AI prototyping (PyTorch), small automation apps, and shipping minimal products fast.</p>
+              <p>I’m a Python developer based in London, specializing in AI prototyping (PyTorch), automation, and lightweight product development. I build tools that are practical, reliable, and easy to use — from research prototypes to deployable utilities.</p>
+              <p>Recent work includes a NAS File Organizer (FastAPI, Docker, SQLite, OCR) and small AI assistants that route questions to the right tools instead of returning noise.</p>
             </div>
           </div>
           <div class="col-6">
@@ -204,19 +205,22 @@
               <h3>Core tools</h3>
               <div class="tags">
                 <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
                 <span class="tag">PyTorch</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
+                <span class="tag">Docker</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Git / GitHub</span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <div class="card">
-            <h3>Currently learning</h3>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">basic deployment</span>
+              <h3>Currently focusing on</h3>
+              <div class="tags">
+                <span class="tag">Deployment</span>
+                <span class="tag">Cloud hosting</span>
+                <span class="tag">Testing</span>
+              </div>
             </div>
           </div>
         </div>
@@ -228,10 +232,12 @@
             <div class="card">
               <h3>Contact</h3>
               <p>Open to remote roles and freelance automation/AI work.</p>
-              <p><a href="thomas.kaen.freelance@gmail">My e-mail</a><br>
-                 Personal: <a href="https://github.com/K4en" target="_blank" rel="noopener">https://github.com/K4en</a><br>
-                 Freelance projects: <a href="https://github.com/ThomasKaen" target="_blank" rel="noopener">https://github.com/ThomasKaen</a><br>
-                 Fiverr: <a href="https://www.fiverr.com/sellers/thomas_kaen/edit" target="_blank" rel="noopener">https://www.fiverr.com/sellers/thomas_kaen</a></p>
+              <p>
+                <a href="mailto:tomi.kaen@gmail.com">tomi.kaen@gmail.com</a><br>
+                Personal GitHub: <a href="https://github.com/K4en" target="_blank" rel="noopener">github.com/K4en</a><br>
+                Freelance projects: <a href="https://github.com/ThomasKaen" target="_blank" rel="noopener">github.com/ThomasKaen</a><br>
+                Fiverr: <a href="https://www.fiverr.com/thomas_kaen" target="_blank" rel="noopener">fiverr.com/thomas_kaen</a>
+              </p>
             </div>
           </div>
           <div class="col-6">
@@ -255,21 +261,21 @@
       },
       classifier: {
         title: 'Architectural Classifier',
-        desc: 'CNN prototype to classify building types/styles. Includes custom dataset prep and training loop.',
-        tags: ['PyTorch','CV','Data'],
+        desc: 'Multi-phase CNN to classify building cultures and styles. Includes custom dataset pipeline, training loop, and early self-improving replay experiments.',
+        tags: ['PyTorch','Computer Vision','Data'],
         code: 'https://github.com/K4en/BuildingClassifier',
         demo: '#',
       },
       sorter: {
-        title: 'Nas File Organizer',
-        desc: 'Content-aware file sorter with OCR for NAS (Synology/QNAP/Docker-friendly).',
+        title: 'NAS File Organizer',
+        desc: 'Content-aware file sorter with OCR for NAS (Synology/QNAP/Docker-friendly) and hybrid Rules + ML approach.',
         tags: ['Python','Automation','NAS','Docker'],
         code: 'https://github.com/ThomasKaen/nas_file_organizer',
         demo: '#',
       },
       renamer: {
         title: 'Bulk File Renamer',
-        desc: 'Batch-renames files using regex, numbering, and case formatting. Simple UI planned.',
+        desc: 'Batch-renames files using regex, numbering, and case formatting. Simple GUI version planned.',
         tags: ['Python','CLI'],
         code: 'https://github.com/ThomasKaen/bulk_renamer_gui',
         demo: '#',
@@ -290,7 +296,7 @@
                 <a class="btn" href="${p.code}" target="_blank" rel="noopener">Code</a>
               </p>
             </div>
-          </div>`
+          </div>`;
       }).join('');
     }
 
